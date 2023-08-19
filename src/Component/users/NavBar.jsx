@@ -2,16 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import "../../styles/nav.scss";
 import { useNavigate } from "react-router-dom";
 import chat from "../../assets/images/chat.png";
-import up from "../../assets/images/up.png";
 import downArrow from "../../assets/images/down-arrow.png";
 import upArrow from "../../assets/images/up-arrow.png";
+import useOnclickOutside from "react-cool-onclickoutside";
 const NavBar = ({ userImg, userName, email, pathName }) => {
   const [showmenu, setShowMenu] = useState(false);
   const [randomuser, setRandomUser] = useState([]);
   const [randomNumber1, setRandomNumber1] = useState(0);
   const [randomNumber2, setRandomNumber2] = useState(1);
   const [showChat, setShowChat] = useState(false);
-  const menuRef = useRef();
+  const menuRef = useOnclickOutside(() => setShowMenu(false));
+  const chatRef = useOnclickOutside(() => setShowChat(false));
   const navigate = useNavigate();
   useEffect(() => {
     const popMenu = document.querySelector(".popMenu");
@@ -36,7 +37,7 @@ const NavBar = ({ userImg, userName, email, pathName }) => {
     setRandomNumber1(Math.floor(Math.random() * 9));
     setRandomNumber2(Math.floor(Math.random() * 9));
   }, [showmenu, showChat]);
-  console.log(randomuser);
+
   return (
     <>
       <div className="nav">
@@ -45,7 +46,11 @@ const NavBar = ({ userImg, userName, email, pathName }) => {
           <div
             className="userImg"
             onClick={() => {
-              setShowMenu(!showmenu);
+              if (showmenu) {
+                setShowMenu(false);
+              } else {
+                setShowMenu(true);
+              }
             }}
           >
             <img src={userImg} alt="" />
@@ -53,7 +58,11 @@ const NavBar = ({ userImg, userName, email, pathName }) => {
           <div
             className="avatar"
             onClick={() => {
-              setShowMenu(!showmenu);
+              if (showmenu) {
+                setShowMenu(false);
+              } else {
+                setShowMenu(true);
+              }
             }}
           >
             <p>{userName}</p>
@@ -97,11 +106,15 @@ const NavBar = ({ userImg, userName, email, pathName }) => {
           </button>
         </div>
       </div>
-      <div className="chat-box">
+      <div className="chat-box" ref={chatRef}>
         <div
           className="icon_conatiner"
           onClick={() => {
-            setShowChat(!showChat);
+            if (showChat) {
+              setShowChat(false);
+            } else {
+              setShowChat(true);
+            }
           }}
         >
           <div className="chat-icon">

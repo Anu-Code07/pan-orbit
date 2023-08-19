@@ -44,55 +44,72 @@ const Profile = () => {
           <div className="info">
             <div className="user-info">
               <div className="key-value">
-                <p>username :</p>
-
-                <h3>{userDetails[0]?.name}</h3>
+                <div className="userlabel">
+                  <p>username :</p>
+                </div>
+                <div className="userValue">
+                  <h3>{userDetails[0]?.name}</h3>
+                </div>
               </div>
               <div className="key-value">
-                <p>e-mail :</p>
-
-                <h3>{userDetails[0]?.email}</h3>
+                <div className="userlabel">
+                  <p>e-mail :</p>
+                </div>
+                <div className="userValue">
+                  <h3>{userDetails[0]?.email}</h3>
+                </div>
               </div>
               <div className="key-value">
-                <p>Phone :</p>
-
-                <h3>{userDetails[0]?.phone.split("x")[0]}</h3>
+                <div className="userlabel">
+                  <p>Phone :</p>
+                </div>
+                <div className="userValue">
+                  <h3>{userDetails[0]?.phone.split("x")[0]}</h3>
+                </div>
               </div>
               <div className="key-value">
-                <p>Website :</p>
-
-                <h3> {userDetails[0]?.website}</h3>
+                <div className="userValue">
+                  <p>Website :</p>
+                </div>
+                <div className="userValue">
+                  <h3> {userDetails[0]?.website}</h3>
+                </div>
               </div>
             </div>
             <div className="divider-line"></div>
             <div className="company-info">
-              <p style={{ textAlign: "center" }}>Company</p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontWeight: 600,
+                  marginBottom: "10px",
+                }}
+              >
+                Company
+              </p>
               <div className="key-value">
-                <p>Name</p>
-
-                <h3>{userDetails[0]?.company.name}</h3>
+                <div className="userlabel">
+                  <p>Name :</p>
+                </div>
+                <div className="userValue">
+                  <h3>{userDetails[0]?.company.name}</h3>
+                </div>
               </div>
               <div className="key-value">
-                <p>catchphrase </p>
-
-                <h3
-                  style={{
-                    width: "50%",
-                  }}
-                >
-                  {userDetails[0]?.company.catchPhrase}
-                </h3>
+                <div className="userlabel">
+                  <p>catchphrase :</p>
+                </div>
+                <div className="userValue">
+                  <h3>{userDetails[0]?.company.catchPhrase}</h3>
+                </div>
               </div>
               <div className="key-value">
-                <p>bs </p>
-
-                <h3
-                  style={{
-                    width: "60%",
-                  }}
-                >
-                  {userDetails[0]?.company.bs}
-                </h3>
+                <div className="userlabel">
+                  <p>bs : </p>
+                </div>
+                <div className="userValue">
+                  <h3>{userDetails[0]?.company.bs}</h3>
+                </div>
               </div>
             </div>
           </div>
