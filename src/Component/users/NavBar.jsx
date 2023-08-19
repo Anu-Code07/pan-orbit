@@ -3,7 +3,8 @@ import "../../styles/nav.scss";
 import { useNavigate } from "react-router-dom";
 import chat from "../../assets/images/chat.png";
 import up from "../../assets/images/up.png";
-
+import downArrow from "../../assets/images/down-arrow.png";
+import upArrow from "../../assets/images/up-arrow.png";
 const NavBar = ({ userImg, userName, email, pathName }) => {
   const [showmenu, setShowMenu] = useState(false);
   const [randomuser, setRandomUser] = useState([]);
@@ -114,7 +115,12 @@ const NavBar = ({ userImg, userName, email, pathName }) => {
             </h3>
           </div>
           <div className="arrow">
-            <img src={up} alt="12" height={30} width={30} />
+            <img
+              src={showChat ? downArrow : upArrow}
+              alt="12"
+              height={30}
+              width={30}
+            />
           </div>
         </div>
         <div className="chat-text_conatiner">
