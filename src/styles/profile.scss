@@ -1,0 +1,152 @@
+.profile_details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 1rem 0 1rem;
+
+
+    .profile-pic {
+        width: 40%;
+        border-right: 0.5px solid rgba($color: #000000, $alpha: 0.24);
+
+        .nameimg {
+            display: flex;
+            flex-direction: column;
+            gap: 8x;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        h3 {
+            color: #555455;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+    }
+
+    .info {
+        margin-top: 10px;
+        padding: 0 5rem;
+
+        .key-value {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+        }
+
+        p {
+            color: #9A9B9B;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+    }
+
+    .userImg {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        text-align: center;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .address {
+        width: 60%;
+        padding-left: 2.5rem;
+
+
+        .addres-text {
+
+            .address-info {
+                margin-left: 50px;
+                margin-top: 20px;
+
+                .key-value {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 12px;
+
+                    p {
+                        color: #9A9B9B;
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        margin-right: 20px;
+
+                    }
+                }
+            }
+        }
+
+
+        .addres-text>h3 {
+
+            color: #9A9B9B;
+            text-transform: capitalize;
+            font-weight: 400;
+            font-size: 1.3rem;
+
+        }
+
+        h3 {
+            color: #545555;
+        }
+
+        .address_map {
+            width: 600px;
+            height: 320px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-left: 50px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+        }
+
+        .lat {
+            display: flex;
+            justify-content: end;
+            margin-top: 10px;
+            width: 100%;
+
+            .text-lat {
+                display: flex;
+                gap: 10px;
+                margin-right: 10px;
+
+
+                span {
+                    color: #545555;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+
+
+            }
+
+            p {
+                color: #9A9B9B;
+                font-size: 15px;
+
+            }
+
+
+        }
+    }
+}
+
+.divider-line {
+    border-bottom: 0.5px solid rgba($color: #000000, $alpha: 0.24);
+    margin: 20px 0;
+}
