@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "../styles/sidebar.scss";
+/** To make th ecurve design i have used span with postion absolute  */
+
+
 const Sidebar = () => {
   const [activetab, setActiveTab] = useState("profile");
   const location = useLocation();
