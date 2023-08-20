@@ -108,7 +108,13 @@ const Profile = () => {
                   <p>bs : </p>
                 </div>
                 <div className="userValue">
-                  <h3>{userDetails[0]?.company.bs}</h3>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                    }}
+                  >
+                    {userDetails[0]?.company.bs}
+                  </h3>
                 </div>
               </div>
             </div>

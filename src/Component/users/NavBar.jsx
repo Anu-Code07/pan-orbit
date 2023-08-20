@@ -5,6 +5,10 @@ import chat from "../../assets/images/chat.png";
 import downArrow from "../../assets/images/down-arrow.png";
 import upArrow from "../../assets/images/up-arrow.png";
 import useOnclickOutside from "react-cool-onclickoutside";
+/*Nav bar both chat and pop Menu components
+
+*/
+
 const NavBar = ({ userImg, userName, email, pathName }) => {
   const [showmenu, setShowMenu] = useState(false);
   const [randomuser, setRandomUser] = useState([]);
