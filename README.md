@@ -1,4 +1,4 @@
-# React + Vite
+# Instructions
 
 Instruction to run:
 1. Download project form git
